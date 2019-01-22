@@ -67,26 +67,34 @@ const map2 = [
 ]
 
 let fullBlock2 = [];
+// let map2y = 0;
 
-map2.forEach((row2, y2) => {
-  row2.forEach((block2, x2) => {
+map2.forEach((row, y) => {
+  // map2y ++
+  row.forEach((block, x) => {
 
-    fullBlock2.push(block2 * blockSize);
+
+
+    fullBlock2.push(block * blockSize);
 
   })
 })
 
 // console.log(fullBlock2[x]);
 
-
+// let arrayNum = 0;
+let curY2 = 0;
 map.forEach((row, y) => {
   row.forEach((block, x) => {
     let fullBlock = block * blockSize;
     let blockPlacey = y * blockSize;
     let blockPlacex = x * blockSize;
     loadImage('img/RPG_path.png').then(image => {
+      curY2 = map2[y];
+      curX2 = (curY2[x] * blockSize);
+      console.log(curX2);
       c.drawImage(image,
-        fullBlock2[x * y], fullBlock,
+        curX2, fullBlock,
         blockSize, blockSize,
 
         blockPlacex, blockPlacey,
