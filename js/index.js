@@ -17,8 +17,8 @@ var canvas = document.querySelector("canvas");
 // canvas.width = window.innerWidth;
 // canvas.height = window.innerHeight;
 
-canvas.width = 500;
-canvas.height = 500;
+canvas.width = (blockSize * 16);
+canvas.height = (blockSize * 16);
 
 
 var c = canvas.getContext("2d");
@@ -105,6 +105,13 @@ map.forEach((row, y) => {
 
 
 
+
+
+setTimeout(Boat, 1);
+
+function Boat() {
+
+
 const map3 = [
   [[-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1]],
   [[-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1], [-1, -1]],
@@ -140,3 +147,7 @@ map3.forEach((row, y) => {
     })
   })
 })
+
+
+
+}
